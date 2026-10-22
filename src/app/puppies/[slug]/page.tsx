@@ -84,7 +84,7 @@ export default async function PuppyDetailPage({ params }: PageProps) {
       </div>
 
       {/* Main Puppy Detail Section */}
-      <main className="tp-section">
+      <section className="tp-section">
         <div className="gutter">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14 items-start">
             {/* Left Column: Large Image */}
@@ -311,7 +311,7 @@ export default async function PuppyDetailPage({ params }: PageProps) {
             </div>
           </div>
         </div>
-      </main>
+      </section>
 
       {/* Recommended / Other Puppies Section */}
       {otherPuppies.length > 0 && (

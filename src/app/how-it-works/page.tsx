@@ -218,7 +218,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Delivery Section */}
-      <section className="tp-section bg-milk">
+      <section id="delivery" className="tp-section bg-milk">
         <div className="gutter">
           <div className="mx-auto max-w-4xl overflow-hidden rounded-3xl border-2 border-cocoa/10 bg-honey/30 p-8 md:p-12">
             <div className="text-center max-w-2xl mx-auto mb-10">

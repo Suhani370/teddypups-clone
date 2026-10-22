@@ -11,8 +11,8 @@
   --color-gold-dark: #e4a352;
   --color-whatsapp: #25d366;
   --color-whatsapp-dark: #128c7e;
-  --font-plush: var(--font-plush), "Bubblegum Sans", cursive;
-  --font-scrawl: var(--font-scrawl), "Caveat", cursive;
+  --font-plush: var(--font-plush), "Fraunces", "Bubblegum Sans", cursive;
+  --font-scrawl: var(--font-scrawl), "Shantell Sans", "Caveat", cursive;
 }
 
 @layer base {
@@ -23,7 +23,7 @@
   body {
     background-color: var(--color-milk);
     color: var(--color-cocoa);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Figtree", sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
@@ -814,3 +814,19 @@
   clip: auto;
   white-space: normal;
 }
+
+@keyframes tp-twinkle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.tp-twinkle {
+  animation: tp-twinkle 3s ease-in-out infinite;
+}
+

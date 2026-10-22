@@ -63,8 +63,8 @@ export function Header() {
                       className="tp-nav-link"
                       data-active={isActive ? "true" : "false"}
                     >
-                      <PawIcon className="tp-nav-link__paw" />
                       <span>{link.label}</span>
+                      <PawIcon className="tp-nav-link__paw" />
                     </Link>
                   </li>
                 );
@@ -81,7 +81,7 @@ export function Header() {
               className="btn btn-whatsapp tp-header__wa text-sm"
               aria-label="Chat with TeddyPups on WhatsApp"
             >
-              <span>WhatsApp</span>
+              WhatsApp us
             </a>
 
             <button

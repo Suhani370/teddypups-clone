@@ -42,7 +42,7 @@ export default function FaqPage() {
       </header>
 
       {/* Main FAQ Content */}
-      <main className="tp-section">
+      <section className="tp-section">
         <div className="gutter max-w-4xl">
           {/* Category Filter Pills */}
           <div className="mb-10 flex flex-wrap items-center justify-center gap-2">
@@ -131,7 +131,7 @@ export default function FaqPage() {
             </div>
           </div>
         </div>
-      </main>
+      </section>
     </div>
   );
 }

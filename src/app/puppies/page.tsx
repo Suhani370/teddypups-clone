@@ -182,7 +182,7 @@ export default function PuppiesPage() {
       </section>
 
       {/* Gone Home Puppies Section */}
-      <section className="tp-section bg-milk">
+      <section id="gone-home" className="tp-section bg-milk">
         <div className="gutter">
           <div className="tp-section__header">
             <div className="mx-auto inline-flex items-center gap-2 rounded-full bg-honey px-3.5 py-1 text-xs font-semibold text-cocoa mb-3">

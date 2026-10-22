@@ -44,44 +44,25 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   return (
     <dialog
       ref={dialogRef}
-      className="tp-menu h-full w-full max-h-none max-w-none m-0 p-0 border-0 outline-none overflow-hidden"
+      className="tp-menu m-0 h-dvh max-h-none w-screen max-w-none bg-honey p-0 text-cocoa backdrop:bg-cocoa/40 border-0 outline-none overflow-hidden"
       onCancel={handleCancel}
       onClose={onClose}
-      aria-label="Mobile navigation"
+      aria-label="Site menu"
     >
-      <div className="flex flex-col h-full w-full justify-between">
-        {/* Top bar with scrawl heading and close button */}
-        <div className="gutter flex items-center justify-between py-5 border-b border-cocoa/10">
-          <span className="font-scrawl text-2xl sm:text-3xl text-cocoa/80 tracking-wide select-none">
-            where to, friend?
-          </span>
+      <div className="flex h-full flex-col gutter pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-5">
+        <div className="flex items-center justify-between">
+          <span className="font-scrawl text-lg">where to, friend?</span>
           <button
             type="button"
             onClick={onClose}
-            className="p-2 -mr-2 rounded-full text-cocoa hover:text-caramel transition-colors"
-            aria-label="Close menu"
+            className="h-11 rounded-full bg-cocoa px-5 font-semibold text-milk hover:bg-caramel transition-colors"
           >
-            <svg
-              className="w-7 h-7"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
+            Close
           </button>
         </div>
 
-        {/* Navigation list */}
-        <div className="flex-1 overflow-y-auto px-6 py-8 flex flex-col items-center justify-center">
-          <nav
-            className="flex flex-col items-center gap-1 sm:gap-2 text-center"
-            aria-label="Mobile navigation links"
-          >
+        <nav aria-label="Mobile" className="mt-10 flex-1 overflow-y-auto">
+          <ul className="space-y-1">
             {navLinks.map((link) => {
               const isActive =
                 link.href === "/"
@@ -89,41 +70,39 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   : pathname?.startsWith(link.href);
 
               return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={onClose}
-                  className="tp-menu-link font-plush transition-transform hover:scale-105"
-                  data-active={isActive ? "true" : "false"}
-                >
-                  {isActive && (
-                    <PawIcon className="w-6 h-6 text-caramel shrink-0" />
-                  )}
-                  <span>{link.label}</span>
-                </Link>
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    onClick={onClose}
+                    className="tp-menu-link font-plush block py-2 text-[clamp(2.4rem,11vw,3.4rem)] hover:text-caramel transition-colors"
+                    data-active={isActive ? "true" : "false"}
+                  >
+                    <span className="inline-flex items-center gap-3">
+                      {link.label}
+                      {isActive && (
+                        <PawIcon className="w-8 h-8 text-caramel shrink-0 inline-block" />
+                      )}
+                    </span>
+                  </Link>
+                </li>
               );
             })}
-          </nav>
-        </div>
+          </ul>
+        </nav>
 
-        {/* Bottom bar with WhatsApp and phone */}
-        <div className="border-t border-cocoa/10 p-6 flex flex-col items-center gap-3 bg-honey/80">
+        <div className="space-y-3 pt-4 border-t border-cocoa/15">
           <a
             href={siteConfig.whatsappLink(siteConfig.defaultWhatsappMessage)}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-whatsapp w-full max-w-xs text-base py-3"
-            aria-label="Contact us on WhatsApp"
+            className="btn btn-whatsapp w-full text-center"
+            aria-label="WhatsApp us"
           >
-            <span>Chat on WhatsApp</span>
+            WhatsApp us
           </a>
-
-          <a
-            href={`tel:${siteConfig.phone.replace(/\s+/g, "")}`}
-            className="text-sm font-medium text-cocoa/70 hover:text-cocoa transition-colors"
-          >
+          <p className="text-center text-sm font-medium text-cocoa/80">
             {siteConfig.phone}
-          </a>
+          </p>
         </div>
       </div>
     </dialog>

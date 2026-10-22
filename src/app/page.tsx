@@ -501,7 +501,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="btn btn-whatsapp"
             >
-              Enquire on WhatsApp
+              WhatsApp us
             </a>
             <Link href="/contact" className="btn btn-ghost">
               Visit &amp; contact
