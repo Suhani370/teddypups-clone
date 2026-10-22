@@ -80,9 +80,19 @@ This document records the exact progression, prompts, and architectural decision
      - Interactive postcard letterform (`tp-letterform`) on the right: "Dear TeddyPups, my name is [___], and you can reach me on [___]... with love, a future puppy parent" + "Post my letter" submit button.
   4. Verified full SSR rendering of all letterform fields and pre-rendered all 29 routes statically with zero errors.
 
+### Session 4: Night-Sky Footer & Mobile Menu Parity Refinement
+- **Prompt:** Review current diff, fix remaining visual differences, check HTML semantics, and prepare deployment.
+- **Actions Taken:**
+  1. Extracted and integrated the exact reference night-sky footer into `src/components/layout/Footer.tsx`, complete with the rolling hill SVG divider curve, 9 twinkling stars (`tp-twinkle`), glowing crescent moon, "Home, at last." heading, illustrated woven puppy basket (`tp-basket`), full 7-link explore list, and contact pills.
+  2. Aligned `src/components/layout/MobileMenu.tsx` to match the exact full-screen dialog styling, handwritten header, and oversized plush navigation.
+  3. Added anchor IDs (`id="gone-home"` on `/puppies` and `id="delivery"` on `/how-it-works`) so footer navigation deep-links scroll directly to target sections.
+  4. Fixed nested `<main>` tags in `/faq` and `/puppies/[slug]` to ensure single top-level `<main id="main">` semantics.
+  5. Verified clean compilation with `npm run build` and tested all 29 routes.
+
 ---
 
 ## 🛡️ Security & Integrity Checklist
 - [x] No API keys, credentials, or `.env` secrets committed.
 - [x] All external puppy photos served safely via HTTPS and validated in `next.config.ts`.
 - [x] Contact form includes client-side field validation and honeypot spam protection.
+

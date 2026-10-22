@@ -8,7 +8,7 @@
 
 ## 🎙️ Part 1: Loom Presentation Script
 
-Use this script verbatim or adapt it naturally while presenting your screen and demonstrating the live web application running on `http://localhost:3000` (or the deployed URL).
+Use this script verbatim or adapt it naturally while presenting your screen and demonstrating the live web application running on `http://localhost:3001` (or the deployed URL).
 
 ### Section 1: Introduction (0:00 – 1:00)
 > *"Hello everyone! My name is [Your Name], and this is my presentation for the Full Stack Developer Internship assignment at Insta Biz Web.
