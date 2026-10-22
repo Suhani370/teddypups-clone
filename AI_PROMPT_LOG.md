@@ -68,6 +68,18 @@ This document records the exact progression, prompts, and architectural decision
   - `npm run lint` passed with 0 ESLint warnings.
   - Automated Node.js fetch verification confirmed HTTP 200 and complete content rendering on all 7 key routes.
 
+### Phase 6: Visual Fidelity & Reference Calibration
+- **User Prompt / Objective:**
+  > "Correct the real differences in typography, heading sizes, layout, spacing, backgrounds, colors, buttons, image sizing and cropping, scalloped edges, and responsive behavior... Home page centered hero vs original 8-scene sky gradient, and Contact page oversized left-aligned heading with letter-style form."
+- **Actions Taken:**
+  1. Extracted exact styles and structure from original `puppy.instabizweb.com` CSS bundles.
+  2. Implemented the complete 8-scene sky gradient flow on the Home page (`tp-hero`, `tp-meet`, `tp-paths`, `tp-chat`, `tp-passport`, `tp-dusk`, `tp-night`, `tp-home`).
+  3. Rebuilt the Contact page (`/contact`) matching the reference:
+     - Oversized `text-giant` left-aligned heading ("Get in touch with us").
+     - Two-column composition with showroom details, WhatsApp CTA, and Google Maps card on the left.
+     - Interactive postcard letterform (`tp-letterform`) on the right: "Dear TeddyPups, my name is [___], and you can reach me on [___]... with love, a future puppy parent" + "Post my letter" submit button.
+  4. Verified full SSR rendering of all letterform fields and pre-rendered all 29 routes statically with zero errors.
+
 ---
 
 ## 🛡️ Security & Integrity Checklist
