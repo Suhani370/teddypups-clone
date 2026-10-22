@@ -11,7 +11,7 @@
 |---|---|
 | **GitHub Repository** | https://github.com/Suhani370/teddypups-clone |
 | **Original Reference Website** | https://puppy.instabizweb.com/ |
-| **Live Demo** | _Pending deployment -- deploy via Vercel Dashboard and update this line_ |
+| **Live Demo** | [https://teddypups-clone-rho.vercel.app/](https://teddypups-clone-rho.vercel.app/) |
 
 ---
 

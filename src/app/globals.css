@@ -830,3 +830,161 @@
   animation: tp-twinkle 3s ease-in-out infinite;
 }
 
+/* ——— Page Header (inner-page hero) ——— */
+.tp-page-header {
+  padding-top: calc(var(--header-h, 5rem) + 3rem);
+  padding-bottom: 3.5rem;
+  background-color: var(--color-honey);
+  text-align: center;
+}
+
+.tp-page-header__title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-family: var(--font-plush), "Bubblegum Sans", cursive;
+  margin-top: 0.5rem;
+}
+
+.tp-page-header__desc {
+  margin-top: 1rem;
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  color: rgba(42, 23, 14, 0.75);
+  line-height: 1.65;
+}
+
+/* ——— Generic Section ——— */
+.tp-section {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.tp-section__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tp-section__title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.15;
+  font-family: var(--font-plush), "Bubblegum Sans", cursive;
+  color: var(--color-cocoa);
+  margin-top: 0.4rem;
+}
+
+.tp-section__subtitle {
+  margin-top: 0.75rem;
+  max-width: 54ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.97rem;
+  color: rgba(42, 23, 14, 0.7);
+  line-height: 1.65;
+}
+
+/* ——— Puppy Grid Cards ——— */
+.tp-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.25rem;
+  border: 2.5px solid var(--color-cocoa);
+  background-color: var(--color-milk);
+  overflow: hidden;
+  box-shadow: 4px 6px 0 rgba(42, 23, 14, 0.10);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 12px 24px rgba(42, 23, 14, 0.14);
+}
+
+/* Fixed-height image container: ensures next/image fill works correctly */
+.tp-card__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-toffee);
+  flex-shrink: 0;
+}
+
+.tp-card__image img {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.tp-card:hover .tp-card__image img {
+  transform: scale(1.04);
+}
+
+/* Status badge (Available / Gone home) */
+.tp-card__badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  border-radius: 9999px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tp-card__badge--available {
+  background-color: var(--color-whatsapp);
+  color: #fff;
+}
+
+.tp-card__badge--gone {
+  background-color: rgba(42, 23, 14, 0.12);
+  color: var(--color-cocoa);
+}
+
+/* Video badge */
+.tp-card__badge--video {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: rgba(42, 23, 14, 0.72);
+  color: #fff;
+  border-radius: 9999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+/* Card body */
+.tp-card__body {
+  padding: 1rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+.tp-card__name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: var(--font-plush), "Bubblegum Sans", cursive;
+  line-height: 1.2;
+}
+
+.tp-card__meta {
+  font-size: 0.8rem;
+  color: rgba(42, 23, 14, 0.6);
+  line-height: 1.4;
+}
+
+.tp-card__cta {
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
