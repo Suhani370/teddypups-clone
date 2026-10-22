@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { puppies, getAvailablePuppies } from "@/data/puppies";
+import { getAvailablePuppies } from "@/data/puppies";
 import { siteConfig } from "@/data/siteConfig";
 import { featuredTestimonial, happyMoments } from "@/data/testimonials";
 import { faqData } from "@/data/faq";

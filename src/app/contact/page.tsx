@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useTransition } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { puppies } from "@/data/puppies";
 import { siteConfig } from "@/data/siteConfig";
 import PawIcon from "@/components/shared/PawIcon";
@@ -22,7 +21,10 @@ function ContactLetterForm() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const p = new URLSearchParams(window.location.search).get("puppy");
-      if (p) setPuppyId(p);
+      if (p) {
+        const timer = setTimeout(() => setPuppyId(p), 0);
+        return () => clearTimeout(timer);
+      }
     }
   }, []);
 

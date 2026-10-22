@@ -1,150 +1,156 @@
-# TeddyPups U.A.E. — Full Website Clone
+# TeddyPups U.A.E. -- Full Website Clone
 
-A production-quality clone of the reference website [TeddyPups U.A.E.](https://puppy.instabizweb.com/), developed for the Full Stack Developer Internship assignment at **Insta Biz Web**.
-
----
-
-## 🐾 Overview
-
-TeddyPups U.A.E. is a premier boutique teacup and teddy bear puppy showroom based in Downtown Dubai. This project faithfully reproduces the complete visual design, warm handcrafted aesthetics, typography, responsive behavior, route hierarchy, and interactive customer journeys of the reference site.
-
-### Live Reference
-- **Original Reference Website:** [https://puppy.instabizweb.com/](https://puppy.instabizweb.com/)
-- **Target Audience:** Families and puppy lovers looking for certified teacup puppies in Dubai or rare imports worldwide.
+> **Insta Biz Web -- Full Stack Developer Internship Assignment**
+> This is an **independent internship assignment** submitted by a candidate for the Full Stack Developer Internship at Insta Biz Web. It is **not** the official TeddyPups U.A.E. website.
 
 ---
 
-## 🚀 Implemented Routes & Pages
+## Links
 
-Every single route and sub-page from the reference site has been implemented:
+| | URL |
+|---|---|
+| **GitHub Repository** | https://github.com/Suhani370/teddypups-clone |
+| **Original Reference Website** | https://puppy.instabizweb.com/ |
+| **Live Demo** | _Pending deployment -- deploy via Vercel Dashboard and update this line_ |
 
-| Route | Page | Purpose / Key Features |
+---
+
+## Overview
+
+TeddyPups U.A.E. is a premier boutique teacup and teddy bear puppy showroom based in Downtown Dubai. This project is a production-quality clone of the reference website, faithfully reproducing the complete visual design, typography, 8-scene sky gradient, scalloped SVG borders, all six pages, and 20 dynamic puppy profile routes.
+
+---
+
+## Implemented Routes and Pages
+
+| Route | Page | Key Features |
 |---|---|---|
-| `/` | **Home** | The complete 8-scene sky gradient flow (`#fffdf8` to `#24130b`): (1) Hero with circular puppy lineup, (2) "Meet the pups" door cards, (3) "Two ways to meet your puppy" fork, (4) "Your puppy journey" concierge steps, (5) "Why families trust TeddyPups" passport book, (6) Dusk testimonials & gallery, (7) Night FAQ accordions with twinkling stars, (8) Home welcome CTA. |
-| `/puppies` | **Puppies Directory** | Complete listing of 15 available puppies + 5 "Happily Adopted (Gone Home ♥)" puppies with breed, sex, age, video badges, and custom import requests. |
-| `/puppies/[slug]` | **Puppy Detail** | Dynamic SSR/SSG page with full specifications, high-res photos, health check summary, Downtown Dubai showroom location, WhatsApp direct enquiry, and related puppy recommendations. |
-| `/happy-families` | **Happy Families** | Customer testimonials including featured story (Sarah M., Dubai) and responsive photo moments gallery of puppies with their new families. |
-| `/how-it-works` | **How It Works** | Comprehensive two-track adoption guide: **Track 1 (In Dubai Showroom)** and **Track 2 (Order Upon Request / Overseas Imports)**, plus delivery policies and the "Premium Puppy Promise". |
-| `/faq` | **Frequently Asked Questions** | Categorized accordion guide (Health & Veterinary, Dubai Showroom, Overseas Imports, Breeds & Delivery) with topic filtering and instant WhatsApp help link. |
-| `/contact` | **Visit & Contact** | Oversized left-aligned `text-giant` header, two-column layout with showroom info, and the signature "Dear TeddyPups" interactive postcard letterform with fill-in-the-blank inputs, stamp, and note pad. |
+| / | Home | 8-scene sky gradient hero, circular puppy lineup, Meet the pups door cards, 4-step journey, twinkling night FAQ, Home at last CTA |
+| /puppies | Puppies Directory | 15 available + 5 adopted puppies with breed, sex, age, video badges |
+| /puppies/[slug] | Puppy Detail | SSG pre-rendered, health checklist, WhatsApp enquiry |
+| /happy-families | Happy Families | Featured testimonial + responsive photo gallery |
+| /how-it-works | How It Works | Dual-track adoption guide (Dubai Showroom + Overseas Imports) |
+| /faq | FAQ | Category-filtered accordion guide |
+| /contact | Visit and Contact | Dear TeddyPups interactive postcard letterform, two-column layout |
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
-- **Framework:** Next.js 15 (App Router with Server & Client Components)
-- **Language:** TypeScript 5 (Strict type-checking across all models and pages)
-- **Styling:** Tailwind CSS v4 & PostCSS
-- **Fonts:** Next Font Google optimization (`Bubblegum Sans` for `--font-plush`, `Caveat` for `--font-scrawl`)
-- **Icons & Assets:** Optimized inline SVG vectors, exact paw-print icons, scalloped patterns, and official brand assets.
-- **Image Optimization:** `next/image` with remote patterns configured for CDN assets.
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16.4.2 -- App Router, SSG via generateStaticParams |
+| Language | TypeScript 5 -- strict mode |
+| Styling | Tailwind CSS v4 with custom @theme and @utility directives |
+| Fonts | next/font/google -- Bubblegum Sans (--font-plush), Caveat (--font-scrawl) |
+| Images | next/image -- remote patterns for CDN assets |
+| Icons | Inline SVGs -- scalloped hems, paw prints, hill divider, puppy basket |
+| Package Manager | npm |
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
-```
+`
 teddypups-clone/
-├── public/
-│   ├── brand/
-│   │   └── logo.png              # Local TeddyPups brand logo
-│   └── icon.png                  # Favicon & touch icon
-├── src/
-│   ├── app/
-│   │   ├── contact/
-│   │   │   └── page.tsx          # Contact & showroom visit page
-│   │   ├── faq/
-│   │   │   └── page.tsx          # Categorized accordion FAQ
-│   │   ├── happy-families/
-│   │   │   └── page.tsx          # Testimonials & customer moments
-│   │   ├── how-it-works/
-│   │   │   └── page.tsx          # Dual-track adoption guide
-│   │   ├── puppies/
-│   │   │   ├── [slug]/
-│   │   │   │   └── page.tsx      # Dynamic puppy profile (SSG)
-│   │   │   └── page.tsx          # Available & adopted directory
-│   │   ├── globals.css           # Global theme, animations, and scallop patterns
-│   │   ├── layout.tsx            # Root layout with Header, Footer, and Google fonts
-│   │   └── page.tsx              # Homepage
-│   ├── components/
-│   │   ├── layout/
-│   │   │   ├── Footer.tsx        # 4-column footer with social links & paw badges
-│   │   │   ├── Header.tsx        # Sticky header with scroll detection & scallop hem
-│   │   │   └── MobileMenu.tsx    # Native dialog full-screen mobile menu
-│   │   └── shared/
-│   │       ├── Accordion.tsx     # Animated accessible accordion
-│   │       ├── PawIcon.tsx       # Brand paw print SVG icon
-│   │       └── ScallopEdge.tsx   # Reusable SVG scallop hem border
-│   └── data/
-│       ├── faq.ts                # Structured FAQ data by category
-│       ├── puppies.ts            # Puppy listings, slugs, statuses, and photos
-│       ├── siteConfig.ts         # Brand metadata, WhatsApp, phone, and links
-│       └── testimonials.ts       # Testimonial stories & happy family gallery
-├── next.config.ts                # Image domains & Turbopack configurations
-├── package.json                  # Scripts & dependencies
-├── postcss.config.mjs            # Tailwind v4 PostCSS plugin
-├── tsconfig.json                 # TypeScript compiler configuration
-├── LOOM_WALKTHROUGH.md           # Video walkthrough presentation guide & script
-└── AI_PROMPT_LOG.md              # Log of actual prompts and decisions
-```
++-- public/brand/logo.png
++-- public/icon.png
++-- src/app/
+|   +-- contact/page.tsx
+|   +-- faq/page.tsx
+|   +-- happy-families/page.tsx
+|   +-- how-it-works/page.tsx
+|   +-- puppies/[slug]/page.tsx   (SSG -- 20 routes)
+|   +-- puppies/page.tsx
+|   +-- globals.css
+|   +-- layout.tsx
+|   +-- page.tsx
++-- src/components/layout/
+|   +-- Footer.tsx     (night-sky: hill SVG, stars, moon, basket)
+|   +-- Header.tsx     (sticky, scroll shadow, paw hover)
+|   +-- MobileMenu.tsx (full-screen native dialog)
++-- src/components/shared/
+|   +-- Accordion.tsx
+|   +-- PawIcon.tsx
+|   +-- ScallopEdge.tsx
++-- src/data/
+|   +-- faq.ts / puppies.ts / siteConfig.ts / testimonials.ts
++-- LOOM_WALKTHROUGH.md
++-- AI_PROMPT_LOG.md
+`
 
 ---
 
-## 💻 Local Setup & Development
+## Local Setup and Development
 
-### 1. Prerequisites
-- **Node.js:** v18.18.0 or later (v20+ recommended)
-- **npm:** v9+ or later
+### Prerequisites
+- Node.js v18.18.0 or later (v20+ recommended)
+- npm v9+
 
-### 2. Installation
-```bash
-# Clone or navigate to the repository
+### Installation
+
+`ash
+git clone https://github.com/Suhani370/teddypups-clone.git
 cd teddypups-clone
-
-# Install dependencies
 npm install
-```
+`
 
-### 3. Run Development Server
-```bash
+### Development Server
+
+`ash
 npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+`
 
-### 4. Build for Production
-```bash
+Open http://localhost:3000 in your browser.
+
+### Production Build
+
+`ash
 npm run build
-```
-This pre-renders all 29 routes statically with zero errors.
-
-### 5. Run Production Server Locally
-```bash
 npm run start
-```
+`
 
 ---
 
-## 🧪 Testing Performed
+## Verified Test Results
 
-1. **Compilation & Static Site Generation (SSG):**
-   - Verified `npm run build` runs smoothly: 20 dynamic puppy routes + 7 root pages compiled.
-2. **Linting & Type Safety:**
-   - `npm run lint` passes with 0 errors and 0 warnings.
-   - `npx tsc --noEmit` validates strict TypeScript compliance across all components.
-3. **Responsive Viewport Verification:**
-   - **Desktop (1440px / 1280px):** Full desktop layout with navigation hover paw indicators and multi-column grids.
-   - **Tablet (1024px / 768px):** Clean wrapping of puppy cards, dual-track adoption layouts, and split contact layout.
-   - **Mobile (390px / 360px):** Hamburger menu opening full-screen dialog, touch-friendly tap targets (>=44px), zero horizontal overflow.
-4. **Form Interactivity:**
-   - Client-side validation for required fields (name, phone, email).
-   - Honeypot spam protection.
-   - Success confirmation card with quick reset or WhatsApp transition.
-5. **Accordions & Navigation:**
-   - Tested interactive expansion/collapse on `/faq` with category filtering.
-   - Tested mobile navigation drawer open and close.
+Tests actually executed -- no results claimed unless the command was run and exit code verified.
+
+| Check | Command | Result |
+|---|---|---|
+| ESLint | npm run lint | Exit 0 -- 0 errors, 0 warnings |
+| TypeScript | npx tsc --noEmit | Exit 0 -- 0 type errors |
+| Production Build | npm run build | Exit 0 -- all 29 routes compiled |
+| Static pages | (build output) | 7 static + 20 SSG puppy profiles + /_not-found |
+
+Responsive testing performed in browser DevTools at 390px, 768px, and 1280px viewports.
+Form validation tested interactively for required fields, honeypot, and success confirmation.
 
 ---
 
-## 📌 Known Limitations & Disclaimers
-- **Backend / CMS:** As instructed, no simulated backend or fake payment gateway was added. The contact form validates on the client and displays a confirmation state.
-- **WhatsApp Integration:** Direct deep links to `wa.me/971541676733` with pre-filled enquiry parameters are wired up for real-world puppy inquiries.
+## Deployment
+
+This project is ready for Vercel deployment.
+
+### Steps (Vercel Dashboard)
+1. Go to https://vercel.com/new and sign in.
+2. Click Import Git Repository and select Suhani370/teddypups-clone.
+3. Leave all default settings (Vercel auto-detects Next.js).
+4. Click Deploy.
+
+Once deployed, replace the Live Demo placeholder above with the actual Vercel URL.
+
+---
+
+## Known Limitations and Disclaimers
+
+- No backend or CMS: static clone only. Contact form validates on client and shows confirmation state; no data is submitted.
+- WhatsApp: deep links to wa.me/971541676733 wired for real enquiries, pre-filled with puppy name.
+- Font availability: Bubblegum Sans and Caveat fetched from Google Fonts at build time. Fraunces and Shantell Sans were unavailable in the build environment and not used.
+- Independent assignment: not affiliated with, endorsed by, or representing the official TeddyPups U.A.E. business.
+
+---
+
+## AI Assistance
+
+Development was assisted by the Google Antigravity agentic AI coding assistant (Google DeepMind). All architectural decisions and design choices were reviewed and guided by the candidate. See AI_PROMPT_LOG.md for the full prompt and decision log.
