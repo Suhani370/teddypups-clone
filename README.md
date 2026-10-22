@@ -20,13 +20,13 @@ Every single route and sub-page from the reference site has been implemented:
 
 | Route | Page | Purpose / Key Features |
 |---|---|---|
-| `/` | **Home** | Hero section with tilted puppy circular lineup, scalloped border patterns, "Meet the Pups" door cards, "Why TeddyPups" guarantees, testimonials preview, and WhatsApp CTA. |
+| `/` | **Home** | The complete 8-scene sky gradient flow (`#fffdf8` to `#24130b`): (1) Hero with circular puppy lineup, (2) "Meet the pups" door cards, (3) "Two ways to meet your puppy" fork, (4) "Your puppy journey" concierge steps, (5) "Why families trust TeddyPups" passport book, (6) Dusk testimonials & gallery, (7) Night FAQ accordions with twinkling stars, (8) Home welcome CTA. |
 | `/puppies` | **Puppies Directory** | Complete listing of 15 available puppies + 5 "Happily Adopted (Gone Home ♥)" puppies with breed, sex, age, video badges, and custom import requests. |
 | `/puppies/[slug]` | **Puppy Detail** | Dynamic SSR/SSG page with full specifications, high-res photos, health check summary, Downtown Dubai showroom location, WhatsApp direct enquiry, and related puppy recommendations. |
 | `/happy-families` | **Happy Families** | Customer testimonials including featured story (Sarah M., Dubai) and responsive photo moments gallery of puppies with their new families. |
 | `/how-it-works` | **How It Works** | Comprehensive two-track adoption guide: **Track 1 (In Dubai Showroom)** and **Track 2 (Order Upon Request / Overseas Imports)**, plus delivery policies and the "Premium Puppy Promise". |
 | `/faq` | **Frequently Asked Questions** | Categorized accordion guide (Health & Veterinary, Dubai Showroom, Overseas Imports, Breeds & Delivery) with topic filtering and instant WhatsApp help link. |
-| `/contact` | **Visit & Contact** | Interactive inquiry form with client-side field validation, anti-spam honeypot, showroom location details, 24/7 direct WhatsApp link, and Google Maps directions link. |
+| `/contact` | **Visit & Contact** | Oversized left-aligned `text-giant` header, two-column layout with showroom info, and the signature "Dear TeddyPups" interactive postcard letterform with fill-in-the-blank inputs, stamp, and note pad. |
 
 ---
 

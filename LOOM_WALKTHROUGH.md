@@ -38,9 +38,13 @@ Use this script verbatim or adapt it naturally while presenting your screen and 
 #### 1. The Home Page (`/`)
 > *"Starting on the homepage: notice the sticky header with scroll awareness. As I scroll down, a soft shadow appears, and on hover, each navigation link animates a cute paw print indicator.
 >
-> In the hero section, we have the tilted puppy lineup showcasing available pups, with the scalloped pattern below it.
->
-> Scrolling down, we have 'Meet the pups', 'Why TeddyPups' with verified breeder badges, customer reviews, and the prominent call-to-action banner wired directly to WhatsApp."*
+> Notice the 8 seamless sky scenes flowing from sunrise cream `#fffdf8` to evening dusk and night:
+> - In the hero section, the circular puppy lineup with tilted photos and 'every puppy is family' note.
+> - 'Meet the pups' with authentic doghouse door cards and 'Available' tags.
+> - 'Two ways to meet your puppy' fork comparing showroom visits with overseas imports.
+> - The 4-step concierge adoption journey.
+> - The 'Puppy Passport' trust section with veterinary checks.
+> - The dusk customer reviews and night FAQ with twinkling stars."*
 
 #### 2. The Puppies Directory (`/puppies`) & Detail View (`/puppies/[slug]`)
 > *"Navigating to the Puppies page: here we have our complete collection. Notice the clean segregation between **Available in Dubai** puppies and **Happily Adopted (Gone Home ♥)** puppies.
@@ -59,9 +63,9 @@ Use this script verbatim or adapt it naturally while presenting your screen and 
 > Each track has a connected step-by-step layout using custom connector lines."*
 
 #### 5. FAQ (`/faq`) & Contact Form (`/contact`)
-> *"On the FAQ page, we have interactive category tabs. Users can filter by Health, Showroom, Imports, or Breeds. Each question is wrapped in an accessible, smoothly animating accordion component.
+> *"On the FAQ page, we have interactive category tabs with animated, accessible accordion components.
 >
-> Finally, on the Contact page, we have our split layout: the left side has an interactive enquiry form with client-side validation for required fields and anti-spam protection, while the right side provides showroom details, opening hours, WhatsApp links, and direct Google Maps access."*
+> Finally, on the Contact page, observe the signature 'Dear TeddyPups' interactive postcard letterform! Instead of a generic contact form, visitors fill in conversational inline blanks: 'Dear TeddyPups, my name is...', with an authentic stamp and note card, while the left column presents Downtown Dubai showroom hours, direct WhatsApp links, and Google Maps directions."*
 
 ---
 
